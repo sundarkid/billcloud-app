@@ -30,7 +30,8 @@ node {
   stage 'smoke testing'
   sh '''#!/bin/bash
   source ~/.rvm/scripts/rvm
-  puppet apply tests/init.pp --noop --modulepath=..
+  bundle exec rake spec_prep
+  puppet apply tests/init.pp --noop --modulepath=spec/fixtures/modules
   '''
 
   stage 'deploy'
