@@ -8,6 +8,7 @@ node {
   source ~/.rvm/scripts/rvm
   which puppet
   ruby --version
+  gem list
   puppet parser validate manifests/
   '''
 
