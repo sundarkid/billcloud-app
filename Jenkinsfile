@@ -11,7 +11,7 @@ node {
 
   stage 'rspec testing'
   sh '''#!/bin/bash
-  source /usr/local/rvm/scripts/rvm
+  source ~/.rvm/scripts/rvm
   bundle install --path=.bundle/gems/
   bundle exec rake spec
   '''
