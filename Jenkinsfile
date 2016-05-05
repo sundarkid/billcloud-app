@@ -6,7 +6,8 @@ node {
   stage 'syntax testing'
   sh '''#!/bin/bash
   source ~/.rvm/scripts/rvm
-  puppet --version
+  which puppet
+  ruby --version
   puppet parser validate manifests/
   '''
 
