@@ -1,5 +1,6 @@
 node {
   checkout scm
+  echo 'beginnning workflow...'
 
   stage 'test'
   echo 'do some rspec testing'
