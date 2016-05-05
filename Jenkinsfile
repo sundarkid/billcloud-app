@@ -11,11 +11,13 @@ node {
 
   stage 'syntax testing'
   sh '''#!/bin/bash
+  source ~/.rvm/scripts/rvm
   bundle exec puppet parser validate manifests/
   '''
 
   stage 'rspec testing'
   sh '''#!/bin/bash
+  source ~/.rvm/scripts/rvm
   bundle exec rake spec
   '''
 
