@@ -8,6 +8,7 @@ node {
   source ~/.rvm/scripts/rvm
   ruby -v
   bundle install --path=.bundle/gems/
+  bundle exec rake spec
   '''
 
   stage 'deploy'
