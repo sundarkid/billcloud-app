@@ -3,8 +3,13 @@ node {
   checkout scm
   echo 'beginnning workflow...'
 
-  stage 'test'
-  echo 'do some rspec testing'
+  stage 'syntax testing'
+  sh '''#!/bin/bash
+  source ~/.rvm/scripts/rvm
+  puppet parser validate manifests/
+  '''
+
+  stage 'rspec testing'
   sh '''#!/bin/bash
   source /usr/local/rvm/scripts/rvm
   bundle install --path=.bundle/gems/
