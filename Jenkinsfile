@@ -6,7 +6,7 @@ node {
   echo 'do some rspec testing'
   sh """
     #!/bin/bash
-    source .rvm/scripts/rvm
+    source ~/.rvm/scripts/rvm
     ruby -v
   """
 
