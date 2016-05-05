@@ -1,5 +1,5 @@
 node {
-  deleteDir
+  deleteDir()
   checkout scm
   echo 'beginnning workflow...'
 
