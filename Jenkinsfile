@@ -4,11 +4,10 @@ node {
 
   stage 'test'
   echo 'do some rspec testing'
-  sh '''
-    #!/bin/bash
-    whoami
-    source ~/.rvm/scripts/rvm
-    ruby -v
+  sh '''#!/bin/bash
+  whoami
+  source ~/.rvm/scripts/rvm
+  ruby -v
   '''
 
   stage 'deploy'
