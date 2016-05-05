@@ -5,6 +5,8 @@ node {
   stage 'test'
   echo 'do some rspec testing'
   sh '''#!/bin/bash
+  CURRDIR=`pwd`
+  echo "working directory: $CURRDIR"
   source ~/.rvm/scripts/rvm
   ruby -v
   bundle install --path=.bundle/gems/
