@@ -6,7 +6,8 @@ node {
   echo 'do some rspec testing'
   sh """
     #!/bin/bash
-    source /usr/local/rvm/scripts/rvm
+    source .rvm/scripts/rvm
+    ruby -v
   """
 
   stage 'deploy'
