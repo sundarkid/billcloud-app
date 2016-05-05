@@ -1,4 +1,5 @@
 node {
+  deletedir
   checkout scm
   echo 'beginnning workflow...'
 
