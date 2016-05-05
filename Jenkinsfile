@@ -27,6 +27,12 @@ node {
   bundle exec rake spec
   '''
 
+  stage 'smoke testing'
+  sh '''#!/bin/bash
+  source ~/.rvm/scripts/rvm
+  bundle exec puppet apply tests/init.pp --noop --modulepath=..
+  '''
+
   stage 'deploy'
   echo 'deploy to puppet masters'
 }
