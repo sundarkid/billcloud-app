@@ -7,7 +7,7 @@ node {
   sh '''#!/bin/bash
   CURRDIR=`pwd`
   echo "working directory: $CURRDIR"
-  source ~/.rvm/scripts/rvm
+  source source /usr/local/rvm/scripts/rvm
   ruby -v
   bundle install --path=.bundle/gems/
   bundle exec rake spec
